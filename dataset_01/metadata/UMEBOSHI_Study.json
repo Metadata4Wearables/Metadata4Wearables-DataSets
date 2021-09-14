@@ -4,70 +4,65 @@
 	"ethics_information": "Ethics committee of Kyoto. Registration Nr: XXYYZZ",
 	"clinical_trial": false,
 	"description": "Study the impact of eating Umeboshi for breakfast",
-	"sample": "Healthy retired persons",
-		"sample_groups": {
-			"description": "Description of the sample group(s) enrolled or examined in the study",
-			"type": "object",
-			"properties": {
-				"name": {
-					"description": "Name of group.",
-					"example": "ACHM patients",
-					"type": "string"
-				},
-				"description": {
-					"description": "Description of sample group",
-					"example": "",
-					"type": "string"
-				},
-				"label": {
-					"description": "Label of sample group",
-					"example": 0,
-					"type": "integer"
-				},
-				"group_size": {
-					"description": "Group size",
-					"example": 6,
-					"type": "integer",
-					"minimum": 1
-				},
-				"inclusion_criteria": {
-					"description": "Inclusion criteria for sample group, given as an array of strings",
-					"example": "",
-					"type": "array",
-					"minItems": 0,
-					"items": {
-						"type": "string"
-					}
-				},
-				"exclusion_criteria": {
-					"description": "Exclusion criteria for sample group, given as an array of strings",
-					"example": "",
-					"type": "array",
-					"minItems": 0,
-					"items": {
-						"type": "string"
-					}
-				}
-			}
+	"sample": "(Almost) fictional persons",
+	"sample_groups": [
+		{
+			"name": "Control",
+			"description": "Control sample: apples for breakfast",
+			"label": 0,
+			"group_size": 3,
+			"inclusion_criteria": [
+					"More than 60 years old",
+					"Famous",
+					"Good at high-energy physics"
+			],
+			"exclusion_criteria": [
+					"More than 60 years old",
+					"Famous",
+					"Good at high-energy physics"
+			]
 		},
-		"intervention": {
-			"description": "Short description of the study intervention, if any",
-			"example": "",
-			"type": "string"
-		},
-		"keywords": {
-			"description": "Key words describing the study.",
-			"example": ["actigraphy", "congenital achromatopsia", "circadian"],
-			"type": "array",
-			"minItems": 3,
-			"items": {
-				"type": "string"
-			}
-		},
-		"contributors": {
-			"$ref": "person.json#/definitions/person"
+		{
+			"name": "Test",
+			"description": "Test sample: umeboshi for breakfast",
+			"label": 1,
+			"group_size": 3,
+			"inclusion_criteria": [
+					"More than 60 years old",
+					"Famous",
+					"Good at (neuro)psychology"
+			],
+			"exclusion_criteria": [
+					"Do not like Umeboshi"
+			]
 		}
-	}
-	"required": ["name", "uuid", "clinical_trial", "ethics_information", "sample", "description", "keywords"]
+	],
+	"intervention": "None",
+	"keywords": ["actigraphy", "fake", "umeboshi"],
+	"contributors": [
+		{
+			"name": "Grégory Hammad",
+			"role": ["CREDIT_00000001","CREDIT_00000002","CREDIT_00000009"],
+			"email": "gregory.hammad@uliege.be",
+			"orcid": "0000-0003-1083-3869",
+			"institution": {
+				"name": "GIGA-CRC in vivo imaging (University of Liège)",
+				"street_address": "8, allée du Six Aout",
+				"city": "Liège",
+				"country": "Belgium"
+			}
+		},
+		{
+			"name": "Christina Schmidt",
+			"role": ["CREDIT_00000001","CREDIT_00000004","CREDIT_00000010"],
+			"email": "christina.schmidt@uliege.be",
+			"orcid": "0000-0002-9867-012X",
+			"institution": {
+				"name": "GIGA-CRC in vivo imaging (University of Liège)",
+				"street_address": "8, allée du Six Aout",
+				"city": "Liège",
+				"country": "Belgium"
+			}
+		}
+	]
 }
-

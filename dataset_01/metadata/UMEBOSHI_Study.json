@@ -1,0 +1,73 @@
+{
+	"name": "Umeboshi",
+	"uuid": "XNZKODZJASX494922",
+	"ethics_information": "Ethics committee of Kyoto. Registration Nr: XXYYZZ",
+	"clinical_trial": false,
+	"description": "Study the impact of eating Umeboshi for breakfast",
+	"sample": "Healthy retired persons",
+		"sample_groups": {
+			"description": "Description of the sample group(s) enrolled or examined in the study",
+			"type": "object",
+			"properties": {
+				"name": {
+					"description": "Name of group.",
+					"example": "ACHM patients",
+					"type": "string"
+				},
+				"description": {
+					"description": "Description of sample group",
+					"example": "",
+					"type": "string"
+				},
+				"label": {
+					"description": "Label of sample group",
+					"example": 0,
+					"type": "integer"
+				},
+				"group_size": {
+					"description": "Group size",
+					"example": 6,
+					"type": "integer",
+					"minimum": 1
+				},
+				"inclusion_criteria": {
+					"description": "Inclusion criteria for sample group, given as an array of strings",
+					"example": "",
+					"type": "array",
+					"minItems": 0,
+					"items": {
+						"type": "string"
+					}
+				},
+				"exclusion_criteria": {
+					"description": "Exclusion criteria for sample group, given as an array of strings",
+					"example": "",
+					"type": "array",
+					"minItems": 0,
+					"items": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"intervention": {
+			"description": "Short description of the study intervention, if any",
+			"example": "",
+			"type": "string"
+		},
+		"keywords": {
+			"description": "Key words describing the study.",
+			"example": ["actigraphy", "congenital achromatopsia", "circadian"],
+			"type": "array",
+			"minItems": 3,
+			"items": {
+				"type": "string"
+			}
+		},
+		"contributors": {
+			"$ref": "person.json#/definitions/person"
+		}
+	}
+	"required": ["name", "uuid", "clinical_trial", "ethics_information", "sample", "description", "keywords"]
+}
+
